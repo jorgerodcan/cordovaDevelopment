@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="sec.jrc.F5Stego" version="1.0">
+    <name>GestureAuth</name>
+    <description></description>
+    <author>Jorge R. Canseco</author>
+    <license>Apache 2.0</license>
+    <keywords>steganography, messages, hidden, bmp, jpg, secret, crypto</keywords>
+
+    <js-module src="www/F5Stego.js" name="F5Stego">
+        <clobbers target="F5Stego"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="F5Stego">
+                <param name="android-package" value="F5Stego"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/F5Stego.java" target-dir="src/"/>
+        <source-file src="src/android/info" target-dir="src/info" />
+        <source-file src="src/android/james" target-dir="src/james" />
+        <source-file src="src/android/net" target-dir="src/net" />
+        <source-file src="src/android/sun" target-dir="src/sun" />
+        <!--<source-file src="libs/f5.jar" target-dir="libs" />
+        <framework src="build.gradle" custom="true" type="gradleReference" /> -->
+
+
+  </platform>
+</plugin>

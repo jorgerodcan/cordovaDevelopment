@@ -1,0 +1,20 @@
+{
+    "version": "1.0",
+    "name": "sec.jrc.f5stego",
+    "cordova_name": "Cordova F5 Stego Plugin",
+    "description": "This plugin allows for encoding and decoding of data streams into JPG images using F5 stegoalgorithm.",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+	"stego",
+	"f5",
+	"jpg",
+	"cover"
+    ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="sec.jrc.magicNumberChecker" version="1.0">
+    <name>MagicNumberChecker</name>
+    <description>This plugin will check files' magic number to verify if their extension is correct.</description>
+    <author>Jorge R. Canseco</author>
+    <license>Apache 2.0</license>
+    <keywords>magic,number,verify,file,extension, magic number</keywords>
+
+    <js-module src="www/MagicNumberChecker.js" name="MagicNumberChecker">
+        <clobbers target="MagicNumberChecker"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MagicNumberChecker">
+                <param name="android-package" value="MagicNumberChecker"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        </config-file>
+
+        <source-file src="src/android/MagicNumberChecker.java" target-dir="src/"/>
+
+    </platform>
+
+</plugin>

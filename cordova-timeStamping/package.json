@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "sec.jrc.timeStamp",
+    "cordova_name": "Cordova Time Stamping plugin",
+    "description": "This plugin connects to a timestamping authority in order to sign publicly arbitrary data streams. It is also possible to check signatures against the same timestamping authority.",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+	"timestamp",
+	"signature",
+	"time",
+	"file",
+	"check",
+	"integrity"
+    ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}

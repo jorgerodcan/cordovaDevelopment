@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "sec.jrc.secureDeletion",
+    "cordova_name": "Secure deletion of files in Android",
+    "description": "This plugin allows to create files which will be securely deleted
+    afterwards in Android devices. It also provides an interface for deleting already
+    created files by purging the free storage.",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+	"secure deletion",
+	"deletion",
+	"file",
+	"erase"
+	  ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}

@@ -1,0 +1,4 @@
+
+dependencies{
+	compile 'info.guardianproject.netcipher:netcipher:1.2'
+}

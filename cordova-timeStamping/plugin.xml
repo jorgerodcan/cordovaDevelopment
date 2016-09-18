@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="sec.jrc.timeStamping" version="1.0">
+    <name>TimeStamping</name>
+    <description>his plugin will send file hashes to a public certification timestamping service in order for it to sign such elements (http://truetimestamp.org)</description>
+    <author>Jorge R. Canseco</author>
+    <license>Apache 2.0</license>
+    <keywords>hash, timestamp, time, pki</keywords>
+
+    <js-module src="www/TimeStamping.js" name="TimeStamping">
+        <clobbers target="TimeStamping"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TimeStamping">
+                <param name="android-package" value="TimeStamping"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="src/android/TimeStamping.java" target-dir="src/"/>
+  </platform>
+
+</plugin>

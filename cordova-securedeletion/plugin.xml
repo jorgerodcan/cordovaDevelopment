@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="sec.jrc.secureDeletion"
+    version="1.0">
+    <name>SecureDeletion</name>
+    <description>This plugin allows to create files which will be securely deleted
+    afterwards in Android devices. It also provides an interface for deleting already
+    created files by purging the free storage.</description>
+    <author>Jorge R. Canseco</author>
+    <license>Apache 2.0</license>
+    <keywords>secure deletion,deletion,file,erase</keywords>
+
+    <js-module src="www/SecureDeletion.js" name="SecureDeletion">
+        <clobbers target="SecureDeletion" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SecureDeletion" >
+                <param name="android-package" value="SecureDeletion"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+          <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+
+        <source-file src="src/android/SecureDeletion.java" target-dir="src/" />
+
+    </platform>
+
+</plugin>

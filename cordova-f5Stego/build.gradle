@@ -1,0 +1,7 @@
+//repositories {
+//    maven { url "https://maven.man.poznan.pl/repository/kiwi-repo/" }
+//}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: '*.jar')
+}

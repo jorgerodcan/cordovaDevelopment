@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "sec.jrc.torify",
+    "cordova_name": "Cordova Torify",
+    "description": "This plugin provides access to the Tor Network and installs Orbot into the device in order to communicate..",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+	"tor",
+	"onion",
+	"guardianproject",
+	"hidden",
+	"privacy",
+	"orbot"
+    ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}

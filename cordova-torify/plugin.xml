@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="sec.jrc.torify" version="1.0">
+    <name>Torify</name>
+    <description>this plugin serves as an entry point for your tor compatibility. It provides a series of calls to re-route traffic..</description>
+    <author>Jorge R. Canseco</author>
+    <license>Apache 2.0</license>
+    <keywords>tor, guardian project, guardian, onion, deep web</keywords>
+
+    <js-module src="www/Torify.js" name="Torify">
+        <clobbers target="Torify"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Torify">
+                <param name="android-package" value="Torify"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="src/android/Torify.java" target-dir="src/"/>
+        <!-- Gradle extra for Orbot -->
+        <source-file src="src/android/libs/netcipher-1.2.1.jar" target-dir="libs" />
+    </platform>
+
+</plugin>

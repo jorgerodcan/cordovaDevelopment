@@ -1,0 +1,6 @@
+
+//apply plugin: 'com.android.library'
+
+dependencies{
+	compile 'info.guardianproject.netcipher:netcipher:1.2'
+}

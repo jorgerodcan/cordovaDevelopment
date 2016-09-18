@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "sec.jrc.magicNumberChecker",
+    "cordova_name": "Magic Number Checker",
+    "description": "This plugin will check files' magic number to verify if their extension is correct.",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+	"magic",
+	"number",
+	"verify",
+	"file",
+	"extension",
+	"magic number"
+    ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}
